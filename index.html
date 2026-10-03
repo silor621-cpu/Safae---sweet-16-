@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Safae ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600;700&family=Parisienne&display=swap');
+
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; color:#4d3443;
+  font-family:'Quicksand',sans-serif;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255,255,255,.9) 0 3px, transparent 4px),
+    radial-gradient(circle at 85% 20%, rgba(255,255,255,.8) 0 2px, transparent 3px),
+    linear-gradient(135deg,#fff0f7,#fbd4e7 45%,#f7e6ff);
+  background-size:auto,auto,cover;
+}
+.hidden{display:none!important}
+.lock{
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  padding:24px;
+}
+.lock-card,.card{
+  width:min(760px,100%); border-radius:30px; padding:34px;
+  background:rgba(255,255,255,.78); backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 20px 70px rgba(154,80,120,.18);
+}
+.lock-card{text-align:center}
+.small{letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:700;color:#b15d88}
+.script{font-family:'Parisienne',cursive}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(42px,9vw,76px);margin:8px 0;color:#9f4775}
+.count{
+  font-size:clamp(30px,7vw,54px); font-weight:700; margin:18px 0 8px;
+  color:#6d3c57;
+}
+.note{font-size:15px;line-height:1.7}
+button,.btn{
+  border:0; cursor:pointer; border-radius:999px; padding:14px 24px;
+  background:linear-gradient(135deg,#e985b4,#b86fca); color:white;
+  font:700 14px 'Quicksand'; box-shadow:0 10px 25px rgba(184,111,154,.25);
+  transition:.25s transform,.25s box-shadow;
+}
+button:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(184,111,154,.32)}
+main{max-width:900px;margin:auto;padding:20px 16px 70px}
+.hero{text-align:center;padding-top:20px}
+.hero img{width:100%;max-width:850px;border-radius:28px;box-shadow:0 18px 60px rgba(151,79,119,.2)}
+.section{margin-top:22px}
+.card h2{font-family:'DM Serif Display',serif;color:#9f4775;font-size:32px;margin:0 0 12px}
+.message{font-size:17px;line-height:1.9}
+.reveal{
+  overflow:hidden; max-height:0; opacity:0; transform:translateY(12px);
+  transition:max-height .8s ease,opacity .5s ease,transform .5s ease;
+}
+.reveal.open{max-height:900px;opacity:1;transform:none}
+.center{text-align:center}
+.photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.fake-photo{
+  min-height:150px;border-radius:20px;padding:20px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#ffe3f0,#eee0ff);font-weight:700;color:#9f4775;text-align:center
+}
+.video-box{
+  margin-top:16px; aspect-ratio:16/9; border-radius:22px; overflow:hidden;
+  background:#171018; display:flex;align-items:center;justify-content:center;
+}
+.video-box iframe{width:100%;height:100%;border:0}
+.footer{text-align:center;margin-top:30px;color:#8c687b;font-size:13px}
+.heart{display:inline-block;animation:float 2s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-5px)}}
+@media(max-width:600px){.card,.lock-card{padding:24px}.photo-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<section id="locked" class="lock">
+  <div class="lock-card">
+    <div class="small">a little surprise is waiting...</div>
+    <div class="script" style="font-size:52px;color:#c05d8d">For Safae ♡</div>
+    <h1>Not yet...</h1>
+    <p class="note">This little birthday world opens on<br><b>October 4, 2026</b> 🎀</p>
+    <div id="countdown" class="count">00 : 00 : 00 : 00</div>
+    <p id="lockHint" class="note">Come back when the clock reaches zero ♡</p>
+  </div>
+</section>
+
+<main id="site" class="hidden">
+  <div class="hero">
+    <img src="safae-opening.png" alt="Pink birthday card for Safae">
+  </div>
+
+  <section class="section card center">
+    <div class="small">01 · open the first envelope</div>
+    <h2>There is something I want to tell you...</h2>
+    <button onclick="reveal('letter')">Open the letter 💌</button>
+    <div id="letter" class="reveal">
+      <p class="message">
+        Happy 16th Birthday, Safae! 🎀<br><br>
+        I hope this new chapter of your life is full of beautiful moments,
+        laughter, peaceful days, and all the little things that make you happy.
+        You are genuinely such a cute and lovely person, and honestly,
+        you are one of the best people I have ever met in LM6E. ♡<br><br>
+        I’m really glad our paths crossed. Never stop being the sweet,
+        funny and wonderful person you are.<br><br>
+        <b>Happy Sweet 16, Safae! ✨</b><br>
+        May 16 be the beginning of your best memories yet. 💗
+      </p>
+      <button onclick="reveal('second')">There is more... 🎁</button>
+    </div>
+  </section>
+
+  <section class="section card center reveal" id="second">
+    <div class="small">02 · little things</div>
+    <h2>For the girl who loves K-pop & K-dramas ♡</h2>
+    <div class="photo-grid">
+      <div class="fake-photo">🎧<br>Music that makes you smile</div>
+      <div class="fake-photo">🎬<br>Drama nights & favorite scenes</div>
+      <div class="fake-photo">🩷<br>Pink things & cute moments</div>
+      <div class="fake-photo">⭐<br>New memories for your 16th year</div>
+    </div>
+    <br>
+    <button onclick="reveal('video')">One last surprise... 👀</button>
+  </section>
+
+  <section class="section card reveal" id="video">
+    <div class="small">03 · your final surprise</div>
+    <h2>Now it's BABYMONSTER time 🖤🩷</h2>
+    <p class="message">
+      Put your favorite BABYMONSTER birthday video here, then press play.
+      The button below opens a BABYMONSTER birthday search on YouTube.
+    </p>
+    <div class="video-box">
+      <iframe
+        src="https://www.youtube.com/embed?listType=search&list=BABYMONSTER%20happy%20birthday"
+        title="BABYMONSTER birthday videos"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <br>
+    <div class="center">
+      <a class="btn" href="https://www.youtube.com/results?search_query=BABYMONSTER+happy+birthday" target="_blank">
+        Open BABYMONSTER on YouTube ♡
+      </a>
+    </div>
+  </section>
+
+  <div class="footer">
+    Made especially for Safae · October 4, 2026 · <span class="heart">♡</span>
+  </div>
+</main>
+
+<script>
+const birthday = new Date("2026-10-04T00:00:00");
+
+function update(){
+  const now = new Date();
+  const diff = birthday - now;
+  if(diff <= 0){
+    document.getElementById('locked').classList.add('hidden');
+    document.getElementById('site').classList.remove('hidden');
+    return;
+  }
+  const d=Math.floor(diff/86400000);
+  const h=Math.floor(diff/3600000)%24;
+  const m=Math.floor(diff/60000)%60;
+  const s=Math.floor(diff/1000)%60;
+  document.getElementById('countdown').textContent =
+    String(d).padStart(2,'0')+" : "+String(h).padStart(2,'0')+" : "+
+    String(m).padStart(2,'0')+" : "+String(s).padStart(2,'0');
+}
+function reveal(id){document.getElementById(id).classList.add('open')}
+update(); setInterval(update,1000);
+</script>
+</body>
+</html>
